@@ -8,7 +8,7 @@ have been reviewed.
 |---|-------|--------|
 | 1 | Repository Setup | ✅ Complete |
 | 2 | Backend Structure | ✅ Complete (this commit) |
-| 3 | Frontend Structure | ⬜ Not started |
+| 3 | Frontend Structure | ✅ Complete (this commit) |
 | 4 | Database | ⬜ Not started |
 | 5 | Authentication | ⬜ Not started |
 | 6 | Resume Upload | ⬜ Not started |
@@ -46,3 +46,6 @@ through commit history.
   Phase 1).
 - `ADR-0002-backend-package-layout.md` — why backend code lives under
   `backend/app/` rather than flat under `backend/` (added in Phase 2).
+- `ADR-0003-frontend-structure.md` — feature-folder conventions,
+  server/client component split, and TanStack Query vs. Zustand state
+  ownership (added in Phase 3).

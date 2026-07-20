@@ -16,7 +16,7 @@ tool access, structured output schema, and evaluation criteria.
 
 ## Status
 
-🚧 **Phase 2 — Backend Structure** (this commit)
+🚧 **Phase 3 — Frontend Structure** (this commit)
 
 See [`docs/architecture/00-roadmap.md`](docs/architecture/00-roadmap.md) for
 the full 19-phase build plan and current progress.
@@ -57,17 +57,22 @@ manifest — this is a monorepo, not a single deployable unit. See
 
 ## Getting started
 
-Only the backend is runnable so far (Phase 3 adds the frontend).
-
 ```bash
+# backend
 make backend-install
-make backend-run     # http://localhost:8000/docs
-make backend-test
+make backend-run       # http://localhost:8000/docs
+
+# frontend (in a second terminal)
+cd frontend
+npm install
+cp ../.env.example .env.local
+npm run dev            # http://localhost:3000
 ```
 
-See [`backend/README.md`](backend/README.md) for full details, or
-[`docs/architecture/ADR-0002-backend-package-layout.md`](docs/architecture/ADR-0002-backend-package-layout.md)
-for why it's structured the way it is.
+See [`backend/README.md`](backend/README.md) and
+[`frontend/README.md`](frontend/README.md) for full details, or the ADRs in
+[`docs/architecture/`](docs/architecture/) for why things are structured
+the way they are.
 
 ## Development process
 
