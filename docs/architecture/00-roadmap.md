@@ -6,8 +6,8 @@ have been reviewed.
 
 | # | Phase | Status |
 |---|-------|--------|
-| 1 | Repository Setup | ✅ In progress (this commit) |
-| 2 | Backend Structure | ⬜ Not started |
+| 1 | Repository Setup | ✅ Complete |
+| 2 | Backend Structure | ✅ Complete (this commit) |
 | 3 | Frontend Structure | ⬜ Not started |
 | 4 | Database | ⬜ Not started |
 | 5 | Authentication | ⬜ Not started |
@@ -44,3 +44,5 @@ through commit history.
 - `ADR-0001-monorepo-layout.md` — why frontend/backend/ai-engine are
   separate top-level directories instead of a single package (added in
   Phase 1).
+- `ADR-0002-backend-package-layout.md` — why backend code lives under
+  `backend/app/` rather than flat under `backend/` (added in Phase 2).
