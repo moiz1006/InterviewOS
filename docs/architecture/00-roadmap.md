@@ -9,7 +9,7 @@ have been reviewed.
 | 1 | Repository Setup | ✅ Complete |
 | 2 | Backend Structure | ✅ Complete (this commit) |
 | 3 | Frontend Structure | ✅ Complete (this commit) |
-| 4 | Database | ⬜ Not started |
+| 4 | Database | ✅ Complete (this commit) |
 | 5 | Authentication | ⬜ Not started |
 | 6 | Resume Upload | ⬜ Not started |
 | 7 | Resume Parsing | ⬜ Not started |
@@ -49,3 +49,7 @@ through commit history.
 - `ADR-0003-frontend-structure.md` — feature-folder conventions,
   server/client component split, and TanStack Query vs. Zustand state
   ownership (added in Phase 3).
+- `ADR-0004-database-schema.md` — JSONB-vs-column boundaries, enum
+  choices, and FK ondelete rules across all 12 tables (added in Phase 4).
+- `erd.md` — Mermaid entity-relationship diagram of the full schema
+  (added in Phase 4).

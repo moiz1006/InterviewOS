@@ -1,6 +1,7 @@
 """Shared pytest fixtures."""
 
 import pytest
+from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
 from app.core.config import Settings
@@ -14,6 +15,14 @@ def test_settings() -> Settings:
 
 
 @pytest.fixture
-def client(test_settings: Settings) -> TestClient:
-    app = create_app(settings=test_settings)
+def app(test_settings: Settings) -> FastAPI:
+    """The FastAPI app instance, exposed separately from `client` so tests
+    can set `app.dependency_overrides[...]` before constructing the
+    client — needed for endpoints like `/health/ready` that depend on a
+    real DB connection we don't have in the test environment."""
+    return create_app(settings=test_settings)
+
+
+@pytest.fixture
+def client(app: FastAPI) -> TestClient:
     return TestClient(app)

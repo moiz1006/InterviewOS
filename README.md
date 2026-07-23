@@ -16,7 +16,7 @@ tool access, structured output schema, and evaluation criteria.
 
 ## Status
 
-🚧 **Phase 3 — Frontend Structure** (this commit)
+🚧 **Phase 4 — Database** (this commit)
 
 See [`docs/architecture/00-roadmap.md`](docs/architecture/00-roadmap.md) for
 the full 19-phase build plan and current progress.

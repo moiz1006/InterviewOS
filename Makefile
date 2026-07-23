@@ -1,4 +1,4 @@
-.PHONY: backend-install backend-run backend-test backend-lint \
+.PHONY: backend-install backend-run backend-test backend-lint backend-migrate \
         frontend-install frontend-run frontend-test frontend-lint
 
 backend-install:
@@ -12,6 +12,9 @@ backend-test:
 
 backend-lint:
 	cd backend && black --check app tests && ruff check app tests && mypy app
+
+backend-migrate:
+	cd backend && alembic upgrade head
 
 frontend-install:
 	cd frontend && npm install

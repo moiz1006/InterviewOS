@@ -40,6 +40,16 @@ class Settings(BaseSettings):
     # --- CORS ---
     backend_cors_origins: list[str] = ["http://localhost:3000"]
 
+    # --- Database ---
+    database_url: str = Field(
+        default="postgresql+asyncpg://interviewos:changeme@localhost:5432/interviewos",
+        description="Async SQLAlchemy URL — must use the asyncpg driver (postgresql+asyncpg://).",
+    )
+    db_echo: bool = Field(
+        default=False,
+        description="Log every SQL statement. Useful locally, never in production.",
+    )
+
     # --- Logging ---
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR"] = "INFO"
     log_json: bool = Field(
